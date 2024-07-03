@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    {
+      "name": "Split line",
+      "className": "SplitLine",
+      "description": "Adds text to the editor.",
+      "path": "src/splitline.ts",
+      "uiComponents": [
+        {
+          "name": "splitLineButton",
+          "type": "Button",
+          "iconPath": "theme/icons/ckeditor.svg"
+        }
+      ]
+    }
+  ]
+}
