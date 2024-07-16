@@ -16,8 +16,9 @@ export default class SplitLineEditing extends Plugin {
 	constructor( editor: Editor ) {
 		super( editor );
 
+		const t = editor.t;
 		editor.config.define( 'splitLine', {
-			options: [ '试卷结构', '试题' ]
+			options: [ t( 'PAGE BREAK' ) ]
 		} );
 	}
 

@@ -57,11 +57,12 @@ class SplitLineButtonView extends View {
 
 	public _createAddSplitLineButton() {
 		const editor = this.editor;
+		const t = editor.t;
 		const splitLineCommand: SplitLineCommand = editor.commands.get( 'splitLine' )!;
 		const view = new ButtonView( editor.locale );
 
 		view.set( {
-			label: '拆分符',
+			label: t( 'Split line' ),
 			icon: splitLineIcon
 		} );
 
