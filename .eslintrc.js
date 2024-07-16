@@ -22,7 +22,8 @@ module.exports = {
 		// Also, importing non-DLL packages is not allowed. If the package requires other features to work, they should be
 		// specified as soft-requirements.
 		// Read more: https://ckeditor.com/docs/ckeditor5/latest/builds/guides/migration/migration-to-26.html#soft-requirements.
-		'ckeditor5-rules/ckeditor-imports': 'error'
+		'ckeditor5-rules/ckeditor-imports': 'error',
+		'linebreak-style': 0
 	},
 	overrides: [
 		{

@@ -1,0 +1,67 @@
+.ck-content .split-line {
+	position: relative;
+	clear: both;
+	padding: 5px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&::after {
+		content: '';
+		position: absolute;
+		border-bottom: 2px dashed hsl(0, 0%, 77%);
+		width: 100%;
+	}
+}
+
+.ck-content .split-line__label {
+	position: relative;
+	z-index: 1;
+	padding: .3em .6em;
+	display: block;
+	text-transform: uppercase;
+	border: 1px solid hsl(0, 0%, 77%);
+	border-radius: 2px;
+	font-family: Helvetica, Arial, Tahoma, Verdana, Sans-Serif;
+	font-size: 0.75em;
+	font-weight: bold;
+	color: hsl(0, 0%, 20%);
+	background: hsl(0, 0%, 100%);
+	box-shadow: 2px 2px 1px hsla(0, 0%, 0%, 0.15);
+
+	/* Disable the possibility to select the label text by the user. */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Do not show the page break element inside the print preview window. */
+@media print {
+	.ck-content .split-line {
+		padding: 0;
+
+		&::after {
+			display: none;
+		}
+	}
+}
+
+
+:root {
+	--ck-split-line-dropdown-width: 90px;
+}
+
+.ck-editor__top .ck-split-line-dropdown {
+	width: var(--ck-split-line-dropdown-width);
+}
+
+.ck-editor__top .ck-split-line-dropdown > .ck-dropdown__panel .ck.ck-list__item {
+	min-width: auto;
+}
+
+.ck-split-line-button-group {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 2px;
+}
